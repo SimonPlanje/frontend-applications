@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Story from './components/Story'
 import WalkCounter from './components/Input'
 import CreateVis from './components/Visualisation'
+import Filter from './components/Filter'
 import fetchData from './helper/fetchData'
 
 function App() {
@@ -27,6 +28,7 @@ fetchData(setGeoMap, setGarages, setRoutes)
         <Story numberUpdate={numberUpdate} numberUpdate={numberState}  />
 
        <CreateVis geoMap={geoMap} garages={garages} routes={routes} />
+       <Filter garages={garages} />
 
       </div>
   )

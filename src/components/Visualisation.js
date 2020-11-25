@@ -5,7 +5,6 @@ import { select, zoom } from 'd3';
 
 
   function CreateVis({ geoMap, garages, routes}){
-console.log(garages)
     const svgEl = useRef('.App')
     const svgGroup = useRef('.App')
     const svg = select(svgEl.current)
@@ -16,23 +15,16 @@ console.log(garages)
       }))
     
     
-    // //ZOOMEN
-    // svg.call(zoom().on('zoom', zoomed))
-    
-    // function zoomed({ transform }) {
-    //   g.attr('transform', transform)
-    //   v.attr('transform', transform)
-    
+   
     
 
     if(geoMap && garages && routes){
-        console.log(geoMap)
         return(
-            <div width="100%" height="100vh">
+            <div width="100%" height="100%">
                 <svg ref={svgEl} width="100%" height="100%">
                 <g className='group' ref={svgGroup}>
                     <g className='map'>
-                    <path d={pathGenerator(geoMap)} stroke="red" />
+                    <path d={pathGenerator(geoMap)} stroke="cyan" fill='transparent'  />
                     </g>
                     <g className='routes'>
                     {routes.map((route, index) =>(
@@ -41,11 +33,11 @@ console.log(garages)
                     </g>
                     <g className='garages'>
                     {garages.map((garage, index) =>(
-                     <circle key={index} fill='lime' r="2" cx={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[0]} cy={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[1]} />
-
+                     <circle class={garage.id} key={index} fill='lime' r="2" cx={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[0]} cy={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[1]} />
                     ))} 
                     </g>
                 </g>
+
             </svg>
             </div>
 
@@ -54,20 +46,6 @@ console.log(garages)
         return null
     }
 }
-    
-    // json('https://www.webuildinternet.com/articles/2015-07-19-geojson-data-of-the-netherlands/townships.geojson').then(
-    //   (data) => {
-    
-    //     g.selectAll('path')
-    //       .data(data.features)
-    //       .enter()
-    //       .append('path')
-    //       .attr('class', 'gemeente')
-    //       .attr('d', pathGenerator)
-    //       .append('title')
-    //       .text((d) => d.properties.name)
-    //   }
-    // )
     
     
     

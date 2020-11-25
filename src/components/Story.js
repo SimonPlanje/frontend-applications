@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 const Story = ({numberUpdate}) => {
-console.log(numberUpdate)
 
 let difference = function(a,b) {console.log(Math.abs(a - b))}
-console.log(difference)
 let moreLess = function(){
   let meerMinder = null;
   if(difference < 1){
