@@ -4,23 +4,21 @@ import { select, zoom } from 'd3';
 
 
 
-  function CreateVis({ geoMap, garages, routes}){
-    const svgEl = useRef('.App')
-    const svgGroup = useRef('.App')
+  function CreateVis({ geoMap, garages, routes, filterData}){
+console.log(filterData)
+
+    const svgEl = useRef('.SVGdiv')
+    const svgGroup = useRef('.SVGdiv')
     const svg = select(svgEl.current)
     const group = select(svgGroup.current)
 
     svg.call(zoom().on('zoom', (e) => {
         group.attr('transform', e.transform)
       }))
-    
-    
-   
-    
 
-    if(geoMap && garages && routes){
+    if(geoMap && routes && filterData){
         return(
-            <div width="100%" height="100%">
+            <div width="100%" height="100%" className='d3div'>
                 <svg ref={svgEl} width="100%" height="100%">
                 <g className='group' ref={svgGroup}>
                     <g className='map'>
@@ -31,8 +29,9 @@ import { select, zoom } from 'd3';
                      <circle key={index} fill="white" r=".7" cx={projection([route.coordinates[1], route.coordinates[0]])[0]} cy={projection([route.coordinates[1], route.coordinates[0]])[1]} />
                     ))} 
                     </g>
+                    
                     <g className='garages'>
-                    {garages.map((garage, index) =>(
+                    {filterData.map((garage, index) =>(
                      <circle class={garage.id} key={index} fill='lime' r="2" cx={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[0]} cy={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[1]} />
                     ))} 
                     </g>
