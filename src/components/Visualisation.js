@@ -7,8 +7,8 @@ import { select, zoom } from 'd3';
   function CreateVis({ geoMap, garages, routes, filterData}){
 console.log(filterData)
 
-    const svgEl = useRef('.SVGdiv')
-    const svgGroup = useRef('.SVGdiv')
+    const svgEl = useRef('.group')
+    const svgGroup = useRef('.group')
     const svg = select(svgEl.current)
     const group = select(svgGroup.current)
 

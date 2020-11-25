@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import Story from '../components/Story'
-import WalkCounter from '../components/Input'
+import Story from '../Story'
+import WalkCounter from '../Input'
 
 function Intro(){
     const [numberState, numberUpdate] = useState('__')

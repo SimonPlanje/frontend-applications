@@ -14,14 +14,15 @@ function FullVis(){
 
 
   useEffect(() => {
-fetchData(setGeoMap, setGarages, setRoutes)
+fetchData(setGeoMap, setGarages, setRoutes, setFilterData)
   }, [])
 
     return(
         <div className="SVGdiv">
-<CreateVis geoMap={geoMap} garages={garages} routes={routes} filterData={filterData} />
-<Filter garages={garages} setFilterData={setFilterData} />
-</div>
+          <h1>Parkeerplaatsen in Nederland en de startpunten van mooie wandelroutes</h1>
+          <Filter garages={garages} setFilterData={setFilterData} />
+          <CreateVis geoMap={geoMap} garages={garages} routes={routes} filterData={filterData} />
+        </div>
     )
 }
 

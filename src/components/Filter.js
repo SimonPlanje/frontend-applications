@@ -1,25 +1,43 @@
 
 function Filter({garages, setFilterData}){
     
+    const radio = document.getElementsByName('radio');
+
+
 function showAll(){
     setFilterData(garages)
+
 }
 
 function showInvalid(){
     const invalidGarage = garages.filter(d => d.id == 'disabled' || d.id == 'both')
     setFilterData(invalidGarage)
+    console.log(radio == true)
+
 }
 
 function showCharge(){
     const showCharge = garages.filter(d => d.id == 'charging' || d.id == 'both')
     setFilterData(showCharge)
 }
+
+
+
+
+
     return(
-        <div>
-            <form className='filterFrom'>
-                <input onChange={showAll} name='radio' type="radio" /><label>Alle parkeerplaatsen </label>
-                <input onChange={showInvalid} name='radio' type="radio"/><label>Invaliden parkeerplaatsen </label>
-                <input onChange={showCharge} name='radio' type="radio"/><label>Oplaad parkeerplaatsen </label>
+        <div className='filter'>
+            <div className='staticLegenda'>
+                    <ul>
+                        <li>Startpunten wandelingen</li>
+                        <li>Parkeerplaatsen</li>
+
+                    </ul>
+            </div>
+            <form className='filterForm'>
+                <label><input onChange={showAll} name='radio' type="radio" />Alle parkeerplaatsen </label>
+                <label><input onChange={showInvalid} name='radio' type="radio"/>Invaliden parkeerplaatsen </label>
+                <label><input onChange={showCharge} name='radio' type="radio"/>Oplaad parkeerplaatsen </label>
             </form>
         </div>
     )
