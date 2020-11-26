@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/frontend-applications/static/css/main.955d66d4.chunk.css",
-    "main.js": "/frontend-applications/static/js/main.09c10814.chunk.js",
-    "main.js.map": "/frontend-applications/static/js/main.09c10814.chunk.js.map",
-    "runtime-main.js": "/frontend-applications/static/js/runtime-main.ef5f2d3c.js",
-    "runtime-main.js.map": "/frontend-applications/static/js/runtime-main.ef5f2d3c.js.map",
-    "static/js/2.3229431a.chunk.js": "/frontend-applications/static/js/2.3229431a.chunk.js",
-    "static/js/2.3229431a.chunk.js.map": "/frontend-applications/static/js/2.3229431a.chunk.js.map",
-    "static/js/3.03c79c8a.chunk.js": "/frontend-applications/static/js/3.03c79c8a.chunk.js",
-    "static/js/3.03c79c8a.chunk.js.map": "/frontend-applications/static/js/3.03c79c8a.chunk.js.map",
+    "main.css": "/frontend-applications/static/css/main.b6e27229.chunk.css",
+    "main.js": "/frontend-applications/static/js/main.40c75c1e.chunk.js",
+    "main.js.map": "/frontend-applications/static/js/main.40c75c1e.chunk.js.map",
+    "runtime-main.js": "/frontend-applications/static/js/runtime-main.6ec3391d.js",
+    "runtime-main.js.map": "/frontend-applications/static/js/runtime-main.6ec3391d.js.map",
+    "static/js/2.1fc12f22.chunk.js": "/frontend-applications/static/js/2.1fc12f22.chunk.js",
+    "static/js/2.1fc12f22.chunk.js.map": "/frontend-applications/static/js/2.1fc12f22.chunk.js.map",
+    "static/js/3.fd81cbda.chunk.js": "/frontend-applications/static/js/3.fd81cbda.chunk.js",
+    "static/js/3.fd81cbda.chunk.js.map": "/frontend-applications/static/js/3.fd81cbda.chunk.js.map",
     "index.html": "/frontend-applications/index.html",
-    "static/css/main.955d66d4.chunk.css.map": "/frontend-applications/static/css/main.955d66d4.chunk.css.map",
-    "static/js/2.3229431a.chunk.js.LICENSE.txt": "/frontend-applications/static/js/2.3229431a.chunk.js.LICENSE.txt"
+    "static/css/main.b6e27229.chunk.css.map": "/frontend-applications/static/css/main.b6e27229.chunk.css.map",
+    "static/js/2.1fc12f22.chunk.js.LICENSE.txt": "/frontend-applications/static/js/2.1fc12f22.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef5f2d3c.js",
-    "static/js/2.3229431a.chunk.js",
-    "static/css/main.955d66d4.chunk.css",
-    "static/js/main.09c10814.chunk.js"
+    "static/js/runtime-main.6ec3391d.js",
+    "static/js/2.1fc12f22.chunk.js",
+    "static/css/main.b6e27229.chunk.css",
+    "static/js/main.40c75c1e.chunk.js"
   ]
 }
