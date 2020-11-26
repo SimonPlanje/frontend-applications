@@ -1,4 +1,11 @@
+# frontend-applications
+
+**functional-programming en frontend data 20/21**  
+**Auteur:** _Simon Planje_  
+[🔴 live gh-pages](https://simonplanje.github.io/frontend-applications/)
+
 # Concept
+![logo volkskrant](public/images/volkskrantlogo.png)
 
 ![Resultaat foto](public/images/conceptimage.png)
 

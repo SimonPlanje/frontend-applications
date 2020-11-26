@@ -10,10 +10,11 @@ function Intro(){
 
     return(
         <div>
-        <WalkCounter numberState={numberState} numberUpdate={numberUpdate} setMeer={setMeer} meer={meer}/>
+        <WalkCounter numberState={numberState} numberUpdate={numberUpdate} setMeer={setMeer} />
         <Story numberUpdate={numberUpdate} numberUpdate={numberState}  meer={meer} setMeer={setMeer}/>
         </div>
     )
 }
+
 
 export default Intro

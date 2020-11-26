@@ -24,9 +24,9 @@ function showCharge(){
                     </ul>
             </div>
             <form className='filterForm'>
-                <label class='label'><input onChange={showAll} name='radio' type="radio" />Alle parkeerplaatsen </label>
-                <label class='label'><input onChange={showInvalid} name='radio' type="radio"/>Invaliden parkeerplaatsen </label>
-                <label class='label'><input onChange={showCharge} name='radio' type="radio"/>Oplaad parkeerplaatsen </label>
+                <label><input onChange={showAll} name='radio' type="radio" />Alle parkeerplaatsen </label>
+                <label><input onChange={showInvalid} name='radio' type="radio"/>Invaliden parkeerplaatsen </label>
+                <label><input onChange={showCharge} name='radio' type="radio"/>Oplaad parkeerplaatsen </label>
             </form>
         </div>
     )

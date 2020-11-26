@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const WalkCounter = ({numberState, numberUpdate, setMeer, meer}) => {
+const WalkCounter = ({numberState, numberUpdate, setMeer}) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    console.log('submitted')
   }
 
   const userInputHandler = (e) => {
@@ -15,7 +14,7 @@ const WalkCounter = ({numberState, numberUpdate, setMeer, meer}) => {
         numberUpdate(e.target.value)
         setMeer('meer')
       }
-  }
+}
 
  return(
   <div className='Walkcounter'>
