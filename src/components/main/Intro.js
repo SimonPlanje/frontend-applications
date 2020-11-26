@@ -4,13 +4,14 @@ import Story from '../Story'
 import WalkCounter from '../Input'
 
 function Intro(){
-    const [numberState, numberUpdate] = useState('__')
+    const [meer, setMeer] = useState('meer')
+    const [numberState, numberUpdate] = useState('0')
 
 
     return(
         <div>
-        <WalkCounter numberState={numberState} numberUpdate={numberUpdate} />
-        <Story numberUpdate={numberUpdate} numberUpdate={numberState}  />
+        <WalkCounter numberState={numberState} numberUpdate={numberUpdate} setMeer={setMeer} meer={meer}/>
+        <Story numberUpdate={numberUpdate} numberUpdate={numberState}  meer={meer} setMeer={setMeer}/>
         </div>
     )
 }

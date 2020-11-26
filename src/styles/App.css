@@ -85,6 +85,7 @@ animation: blink 2s linear infinite;
   }
 
   .Walkcounter{
+      margin: 3em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -140,7 +141,7 @@ margin-bottom: 4em;
 .staticLegenda ul li{
     color: var(--white);
     background: var(--dark);
-    box-shadow: inset 45px 0px 0px 0px var(--white);
+    box-shadow: inset 45px 0px 0px 0px var(--pink);
     list-style-type: none;
     font-size: 1.5em;
     font-weight: bold;
@@ -150,7 +151,7 @@ margin-bottom: 4em;
 }
 
 .staticLegenda ul li:first-of-type{
-box-shadow: inset 45px 0px 0px 0px var(--lime);
+box-shadow: inset 45px 0px 0px 0px var(--light);
 
 
 }
@@ -178,6 +179,12 @@ color: var(--bluegrey)
 .filterForm label input {
     opacity: 0;
         }
+
+strong {
+    color: var(--pink);    
+    font-size: 1.5em;
+}
+
 
 @keyframes blink {
     0% {

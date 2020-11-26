@@ -1,30 +1,19 @@
 
 function Filter({garages, setFilterData}){
-    
-    const radio = document.getElementsByName('radio');
-
 
 function showAll(){
     setFilterData(garages)
-
 }
 
 function showInvalid(){
     const invalidGarage = garages.filter(d => d.id == 'disabled' || d.id == 'both')
     setFilterData(invalidGarage)
-    console.log(radio == true)
-
 }
 
 function showCharge(){
     const showCharge = garages.filter(d => d.id == 'charging' || d.id == 'both')
     setFilterData(showCharge)
 }
-
-
-
-
-
     return(
         <div className='filter'>
             <div className='staticLegenda'>

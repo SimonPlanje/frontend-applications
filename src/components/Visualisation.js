@@ -22,17 +22,17 @@ console.log(filterData)
                 <svg ref={svgEl} width="100%" height="100%">
                 <g className='group' ref={svgGroup}>
                     <g className='map'>
-                    <path d={pathGenerator(geoMap)} stroke="cyan" fill='transparent'  />
+                    <path d={pathGenerator(geoMap)} stroke="var(--bluegrey)" fill='transparent'  />
                     </g>
                     <g className='routes'>
                     {routes.map((route, index) =>(
-                     <circle key={index} fill="white" r=".7" cx={projection([route.coordinates[1], route.coordinates[0]])[0]} cy={projection([route.coordinates[1], route.coordinates[0]])[1]} />
+                     <circle key={index} fill="var(--light)" r=".7" cx={projection([route.coordinates[1], route.coordinates[0]])[0]} cy={projection([route.coordinates[1], route.coordinates[0]])[1]} />
                     ))} 
                     </g>
                     
                     <g className='garages'>
                     {filterData.map((garage, index) =>(
-                     <circle class={garage.id} key={index} fill='lime' r="2" cx={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[0]} cy={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[1]} />
+                     <circle class={garage.id} key={index} fill='var(--pink)' r="2" cx={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[0]} cy={projection([garage.accessPointLocation[0].longitude, garage.accessPointLocation[0].latitude])[1]} />
                     ))} 
                     </g>
                 </g>
