@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Story from '../Story'
 import WalkCounter from '../Input'
 
 function Intro(){
-    const [meer, setMeer] = useState('meer')
-    const [numberState, numberUpdate] = useState('0')
 
+    const [meer, setMeer] = useState('meer')
+    const [numberState, numberUpdate] = useState(() => {
+        const localData = localStorage.getItem('numberState')
+        return localData ? localData : '0'
+    })
+
+useEffect(() => {
+    localStorage.setItem('numberState', (numberState))
+}, [numberState])
 
     return(
         <div>
