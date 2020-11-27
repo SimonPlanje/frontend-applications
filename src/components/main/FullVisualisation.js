@@ -22,9 +22,12 @@ function FullVis(){
 fetchData(setGeoMap, setGarages, setRoutes, setFilterData)
   }, [])
 
-useEffect(() => {
-  localStorage.setItem('filterData', JSON.stringify(filterData))
-}, [filterData])
+    useEffect(() => {
+      localStorage.setItem('filterData', JSON.stringify(filterData))
+    }, [filterData])
+  
+
+
 
     return(
         <div className="SVGdiv">
