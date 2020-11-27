@@ -7,15 +7,24 @@ import fetchData from '../../helper/fetchData'
 function FullVis(){
 
       //State
-  const [geoMap, setGeoMap] = useState(null)
   const [garages, setGarages] = useState(null)
+      
+  const [geoMap, setGeoMap] = useState(null)
   const [routes, setRoutes] = useState(null)
-  const [filterData, setFilterData] = useState(garages)
+
+  const [filterData, setFilterData] = useState(() => {
+    const localData = localStorage.getItem('filterData')
+    return localData ? JSON.parse(localData) : garages
+})
 
 
   useEffect(() => {
 fetchData(setGeoMap, setGarages, setRoutes, setFilterData)
   }, [])
+
+useEffect(() => {
+  localStorage.setItem('filterData', JSON.stringify(filterData))
+}, [filterData])
 
     return(
         <div className="SVGdiv">

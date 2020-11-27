@@ -10,7 +10,6 @@ const fetchData = (setGeoMap, setGarages, setRoutes, setFilterData) =>{
     })
     json(RDWData).then(data => {
         setGarages(data)
-        setFilterData(data)
     })
     json(routeData).then(data => {
         setRoutes(data)
