@@ -61,23 +61,18 @@ border: none;
 outline: none;
 text-align: center;
 transition: ease .5s;
-animation: blink 2s linear infinite;
+animation: border 2s ease-in-out infinite;
 
 }
 .numberForm:hover{
-    box-shadow: inset 0px 0px 0px 8px var(--bluegrey);
+    background-color: var(--bluegrey);
     transition: ease .5s;
+
 }
 
 .numberForm:focus{
-    box-shadow: inset 0px 0px 0px 8px var(--bluegrey);
+    background-color: var(--bluegrey);
     transition: ease .5s;
-}
-
-
-.numberForm::placeholder{
-    color:lightgray;
-    opacity: 40%;
 
 }
 
@@ -209,5 +204,16 @@ strong {
     }
   }
 
+  @keyframes border {
+    0% {
+        box-shadow: inset 0px 0px 0px 0px var(--bluegrey);
+    }
+    50% {
+        box-shadow: inset 0px 0px 0px 15px var(--bluegrey);
 
+    }
+    100%{
+        box-shadow: inset 0px 0px 0px 0px var(--bluegrey);
+    }
+  }
 
