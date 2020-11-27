@@ -12,23 +12,17 @@ function FullVis(){
   const [geoMap, setGeoMap] = useState(null)
   const [routes, setRoutes] = useState(null)
 
-  const [filterData, setFilterData] = useState(() => {
-    const localData = localStorage.getItem('filterData')
-    return localData ? JSON.parse(localData) : garages
-})
+  const [filterData, setFilterData] = useState(garages)
 
 
   useEffect(() => {
 fetchData(setGeoMap, setGarages, setRoutes, setFilterData)
   }, [])
 
-    useEffect(() => {
-      localStorage.setItem('filterData', JSON.stringify(filterData))
-    }, [filterData])
+    // useEffect(() => {
+    //   localStorage.setItem('filterData', JSON.stringify(filterData))
+    // }, [filterData])
   
-
-
-
     return(
         <div className="SVGdiv">
           <h1>Parkeerplaatsen in Nederland en de startpunten van mooie wandelroutes</h1>
